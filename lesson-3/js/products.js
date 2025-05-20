@@ -1,12 +1,23 @@
 // STEP 1: Declare and initialize variables
 // STEP 1a: Grab the parts of the DOM that we need to build the invoice
-
+const productList = document.querySelector("tbody");
+const totalData = document.querySelector("tfoot td:first-of-type");
 // STEP 1b: Build the products array in the format 'Product Name:0.00'
-
+let products = [
+	"Frozen Pizza: 5.99", 
+	"Orange Juice: 7.95",
+	"Milk : 6.95",
+	"Dozen Eggs: 6.95",
+	"Bacon: 7.49",
+	"Kiwi Fruit: 3.95"
+]
 // STEP 1c: Set up invoiceTotal variable - start at zero
-
+let invoiceTotal = 0;
 // STEP 1d: Declare the itemRow and the itemDetail array;
-
+let itemRow = [];
+let itemDetail = [];
+let itemDesc;
+let itemPrice;
 // STEP 2: Build a loop to iterate through the products array
 
 	// STEP 3: Break apart the product name from the price for each item with split()
