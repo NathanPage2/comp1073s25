@@ -20,8 +20,14 @@ let playback = [];
 //Creating two empty arrays to use later (unsure if this is a good idea so far)
 let iO = 0;
 let iT = 0;
-//We need to set different placeholder values for all five (only two rn)
+let iThr = 0;
+let iF = 0;
+let iFv = 0;
+//We need to set different placeholder values for all five (done!)
 
+
+
+//First BUTTON
 function buttonOnes (){
     //Creating a function
 iO++;
@@ -37,7 +43,7 @@ button1.textContent = button1opt[iO];
 button1.addEventListener("click", buttonOnes);
 //Running the function when button 1 is clicked
 
-
+//SECOND BUTTON
 function buttonTwos (){
     //Same thing creating a function for button 2
 iT++;
@@ -53,4 +59,47 @@ button2.addEventListener("click", buttonTwos);
 //Plays the function when the button is pressed.
   
 
+//THIRD BUTTON
+function buttonThrees (){
+    //Same thing creating a function for button 3
+iThr++;
+//Adding it everytime we hit the button to cycle through
+if (iThr >= button3opt.length){
+    //If it becomes greater than or equal it returns to zero
+    iThr = 0;
+}
+button3.textContent = button3opt[iThr];
+//displays it in the button
+}
+button3.addEventListener("click", buttonThrees);
+//Plays the function when the button is pressed.
 
+// FOURTH BUTTOn
+function buttonFours (){
+    //Same thing creating a function for button 4
+iF++;
+//Adding it everytime we hit the button to the count
+if (iF >= button4opt.length){
+    //If it becomes greater than it returns to zero
+    iF = 0;
+}
+button4.textContent = button4opt[iF];
+//displays it in the button
+}
+button4.addEventListener("click", buttonFours);
+//Plays the function when the button is pressed.
+  
+
+function buttonFives (){
+    //Same thing creating a function for button 5
+iFv++;
+//Adding it everytime we hit the button
+if (iFv >= button5opt.length){
+    //If it becomes greater than it returns to zero
+    iFv = 0;
+}
+button5.textContent = button5opt[iFv];
+//displays it in the button
+}
+button5.addEventListener("click", buttonFives);
+//Plays the function when the button is pressed.
