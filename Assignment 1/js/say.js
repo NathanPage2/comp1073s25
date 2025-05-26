@@ -4,8 +4,10 @@ const button2 = document.querySelector (".Button2 > button");
 const button3 = document.querySelector (".Button3 > button");
 const button4 = document.querySelector (".Button4 > button");
 const button5 = document.querySelector (".Button5 > button");
-//Creating variables for the button to cycle
-
+const playButt = document.querySelector (".Randback > button:first-of-type");
+//Creating variables for the button to cycle and generate
+const placeHolder = document.getElementById("placeholder");
+//This tags our place holder on the page so we can place the story there!
 
 let button1opt = ["The Turkey", "Mom", "Dad", "The Dog", "My Teacher", "The Elephant", "The Cat" ];
 let button2opt = ["Sat On", "Ate", "Danced With", "Saw", "Doesn't Like", "Kissed" ];
@@ -14,10 +16,8 @@ let button4opt = ["Goat", "Monkey", "Fish", "Cow", "Frog", "Bug", "Worm"];
 let button5opt = ["On The Moon", "On The Chair", "In My Spaghetti", "In My Soup", "On The Grass", "In My Shoes"];
 //We are simply just putting the options that the user can see into Arrays to use later
 
-let suprises = [];
-let playback = [];
+//I did not end up using the empty arrays
 
-//Creating two empty arrays to use later (unsure if this is a good idea so far)
 let iO = 0;
 let iT = 0;
 let iThr = 0;
@@ -103,3 +103,14 @@ button5.textContent = button5opt[iFv];
 }
 button5.addEventListener("click", buttonFives);
 //Plays the function when the button is pressed.
+
+function playButton (){
+    //Function for the playback button
+    story = `${button1opt[iO]} ${button2opt[iT]} ${button3opt[iThr]} ${button4opt [iF]} ${button5opt[iFv]}`;
+    //Gathering all the resualts in the current array
+    placeHolder.textContent = story;
+    //Ensuring the text gets displayed on the page
+}
+playButt.addEventListener("click", playButton);
+//When it clicks it activates the function!
+
