@@ -1,3 +1,7 @@
+//Done by Nathan Page (200609542)
+//May 26, 2025
+//I could not find a good JavaScript validator
+
 //I can select the first of type but need to specify that I'm getting the button only in the rest
 const button1 = document.querySelector ("button:first-of-type");
 const button2 = document.querySelector (".Button2 > button");
@@ -5,7 +9,8 @@ const button3 = document.querySelector (".Button3 > button");
 const button4 = document.querySelector (".Button4 > button");
 const button5 = document.querySelector (".Button5 > button");
 const playButt = document.querySelector (".Randback > button:first-of-type");
-//Creating variables for the button to cycle and generate
+const randomButt = document.querySelector(".Randback > button:nth-of-type(2)");
+//Creating variables for the button to cycle, playback and randomize
 const placeHolder = document.getElementById("placeholder");
 //This tags our place holder on the page so we can place the story there!
 
@@ -114,3 +119,19 @@ function playButton (){
 playButt.addEventListener("click", playButton);
 //When it clicks it activates the function!
 
+function randomButton (){
+    //Creating a new function for the random button
+    iO = Math.floor(Math.random () * button1opt.length);
+    iT = Math.floor(Math.random () * button2opt.length);
+    iThr = Math.floor(Math.random () * button3opt.length);
+    iF = Math.floor(Math.random () * button4opt.length);
+    iFv = Math.floor(Math.random () * button5opt.length);
+    //Picks one number randomly from the array and than rounds to give us the answer on what should be displayed from that number
+story = `${button1opt[iO]} ${button2opt[iT]} ${button3opt[iThr]} ${button4opt [iF]} ${button5opt[iFv]}`;
+//Retriving the resaults from the current Array
+placeHolder.textContent = story;
+//Displaying the text on the page
+}
+randomButt.addEventListener("click", randomButton);
+//Activating the function on click!
+//We are done!
