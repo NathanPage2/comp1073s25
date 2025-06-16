@@ -10,7 +10,7 @@ myAge = 53;
 /* STEP 3: Updating variables
 Once a variable has been declared, this can be done any time */
 myName = "Iain";
-myAge = 54
+myAge = 54;
 // STEP 4: Variable types (use typeof in the console)
 // Numbers
 let numCars = 5;
