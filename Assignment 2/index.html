@@ -1,5 +1,6 @@
 <!--Done by Nathan Page (200609542)-->
 <!--July 10th 2025-->
+<!--Had to make some changes to the labels to get it vaildated by w3c-->
 <!DOCTYPE html>
 <html lang="en">
 <!--Declaring it will be an english html page-->
@@ -23,25 +24,44 @@
   <input type="text" id="firstName" name="firstName" size="15" required><br><br>
 <!--Asking the person ordering what there first name is-->
 
-<label for="flavor">What flavor would you like?</label><br>
+<label>What flavor would you like?</label><br>
 <!--Setting up a radio so the user can only be pick one flavor-->
 <input type="radio" id="berryBlast" name="flavChoice" value="BerryBlast" required>
-<label for="flavor">Berry Blast</label><br>
+<label for="berryBlast">Berry Blast</label><br>
 
 <input type="radio" id="orangeVanilla" name="flavChoice" value="OrangeVanilla" required>
-<label for="flavor">Orange Vanilla</label><br>
+<label for="orangeVanilla">Orange Vanilla</label><br>
 
 <input type="radio" id="strawberryBanana" name="flavChoice" value="StrawberryBanana" required>
-<label for="flavor">Strawberry Banana</label><br>
+<label for="strawberryBanana">Strawberry Banana</label><br>
 
 <input type="radio" id="peach" name="flavChoice" value="Peach" required>
-<label for="flavor">Peach</label><br>
+<label for="peach">Peach</label><br><br>
 <!--Putting brs at the end of the labels to ensure they show up on a tidy line-->
 <!--I'm putting the required field at the end because i'm hoping it will make them have to pick one before moving on but I will see-->
 
 
+<!--So here we are asking the user what size of drink they would like-->
+<label>What size of drink would you like?</label><br>
+<!--Same as flavor making it a radio so they can only submit one size-->
+<input type="radio" id="small" name="sizeChoice" value="Small" required>
+<label for="small">Small</label><br>
 
+<input type="radio" id="medium" name="sizeChoice" value="Medium" required>
+<label for="medium">Medium</label><br>
+
+<input type="radio" id="large" name="sizeChoice" value="Large" required>
+<label for="large">Large</label><br>
+
+<input type="radio" id="superSize" name="sizeChoice" value="SuperSize" required>
+<label for="superSize">Super Size</label><br>
+
+<!--Same logic as before we have just put brs to add space and require them to pick one-->
+
+<button type="button">Order</button>
 </form>
-
+<!--That concludes the form-->
+<div id="order"></div>
+<!--My thought process with is having the js print what was ordered here-->
 </body>
 </html>
