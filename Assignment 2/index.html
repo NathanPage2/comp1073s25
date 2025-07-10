@@ -1,13 +1,47 @@
+<!--Done by Nathan Page (200609542)-->
+<!--July 10th 2025-->
 <!DOCTYPE html>
 <html lang="en">
+<!--Declaring it will be an english html page-->
 <head>
 <meta charset="utf-8"/>
+<!--Declaring the default charset-->
 <title>Assignment 2</title>
+<!--Giving it a title-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--Standard scale-->
 <link href="css/style.css" rel="stylesheet"/>
 <script src="js/smoothie.js" defer></script>
+<!--Linking our css and js pages-->
 </head>
+<body>
+<h1>Welcome to the Smoothie Ordering Website!</h1>
+<h3>Please insert what type of smoothie you would like to order</h3>
+<!--Giving an introduction to our website-->
+<form>
+<label for="firstName">What is your first name?</label><br>
+  <input type="text" id="firstName" name="firstName" size="15" required><br><br>
+<!--Asking the person ordering what there first name is-->
+
+<label for="flavor">What flavor would you like?</label><br>
+<!--Setting up a radio so the user can only be pick one flavor-->
+<input type="radio" id="berryBlast" name="flavChoice" value="BerryBlast" required>
+<label for="flavor">Berry Blast</label><br>
+
+<input type="radio" id="orangeVanilla" name="flavChoice" value="OrangeVanilla" required>
+<label for="flavor">Orange Vanilla</label><br>
+
+<input type="radio" id="strawberryBanana" name="flavChoice" value="StrawberryBanana" required>
+<label for="flavor">Strawberry Banana</label><br>
+
+<input type="radio" id="peach" name="flavChoice" value="Peach" required>
+<label for="flavor">Peach</label><br>
+<!--Putting brs at the end of the labels to ensure they show up on a tidy line-->
+<!--I'm putting the required field at the end because i'm hoping it will make them have to pick one before moving on but I will see-->
 
 
 
+</form>
+
+</body>
 </html>
