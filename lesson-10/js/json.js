@@ -1,7 +1,9 @@
 /* STEP 2: Reference the HEADER and the SECTION elements with variables */
-
-
+const header = document.querySelector("header");
+const section = document.querySelector("section");
 // STEP 3a: Create the asynchronous function populate()
+async function populate(){
+
 
     // Introducing JavaScript Object Notation (JSON): https://json.org/
     // STEP 4: Store the URL of a JSON file in a variable */
@@ -21,7 +23,7 @@
 
 
 // STEP 3b: Call the populate() function
-
+}
 
 /* STEP 9b: Build out the populateHeader() function */
 function populateHeader() {
