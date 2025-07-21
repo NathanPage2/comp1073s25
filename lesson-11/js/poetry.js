@@ -1,13 +1,19 @@
 // STEP 1: Grab the HTML elements we need for the interaction
-
-
+const verseChoose = document.querySelector("#verse-choose");
+const pre = document.querySelector("pre");
 // STEP 2: Build out the event handler for the SELECT element
-
+verseChoose.addEventListener("change", function(){
+    let selectedVerse = verseChoose.value;
+    console.log(selectedVerse);
+    updateDisplay(selectedVerse);
+});
 
 // STEP 3: Construct updateDisplay() function
-
+function updateDisplay(chosenVerse){
+    console.log("Selected verse is " + chosenVerse);
+}
     // STEP 4: Declare and initialize URL to point to text file(s)
-    
+    let url = "verse1.txt";
 
     // STEP 5: Build fetch() with promises
     // STEP 5a: Use fetch and pass in the URL
